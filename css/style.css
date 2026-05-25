@@ -1,0 +1,627 @@
+:root {
+    --fons-global: #f5f5f7;
+    --fons-caixes: #ffffff;
+    --text-principal: #1d1d1f;
+    --text-secundari: #86868b;
+    --blau-apple: #0071e3;
+    --blau-hover: #0077ed;
+    --vora-suau: rgba(0, 0, 0, 0.08);
+    --ombras-premium: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fons-global);
+    color: var(--text-principal);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.seccio-titol {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.seccio-subtitol {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secundari);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.capçalera-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(245, 245, 247, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--vora-suau);
+}
+
+.capçalera-principal nav {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 19px; 
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-principal);
+    font-size: 14px; 
+    font-weight: 400;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+    opacity: 1;
+    color: var(--blau-apple);
+}
+
+main {
+    margin-top: 64px;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--text-principal);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.btn-principal:hover {
+    background-color: #333336;
+}
+
+.btn-principal-alternatiu {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--blau-apple);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-principal-alternatiu:hover {
+    background-color: var(--blau-hover);
+    transform: scale(1.02);
+}
+
+.btn-text {
+    display: inline-block;
+    color: var(--blau-apple);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+.seccion-inici {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.inici-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.contingut-inici {
+    flex: 1;
+    max-width: 580px;
+}
+
+.tagline {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secundari);
+    margin-bottom: 12px;
+}
+
+.contingut-inici h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+}
+
+.contingut-inici h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-secundari);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.descripcio-hero {
+    font-size: 19px;
+    line-height: 1.42;
+    color: var(--text-secundari);
+    margin-bottom: 32px;
+}
+
+.cta-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.foto-perfil {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 400px;
+}
+
+.foto-perfil img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    object-position: top center; 
+    border-radius: 28px;
+    border: 1px solid var(--vora-suau);
+    box-shadow: var(--ombras-premium);
+    background-color: var(--fons-global);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.seccion-about {
+    padding: 60px 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.about-bento-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.caixa-about-text {
+    flex: 1;
+    text-align: left;
+    max-width: 540px;
+}
+
+.caixa-about-video {
+    flex: 1;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-mini {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #86868b;
+    margin-bottom: 16px;
+}
+
+.text-apple-manifesto {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+    color: #86868b;
+}
+
+.text-apple-manifesto span {
+    color: #ffffff;
+}
+
+.video-about-ajust {
+    background-color: var(--fons-caixes) !important;
+    border: none !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4) !important;
+    width: 100%;
+}
+
+.video-about-ajust .video-info {
+    background-color: var(--fons-caixes) !important;
+}
+
+.video-about-ajust .video-info h3 {
+    color: var(--text-principal) !important;
+}
+
+.video-about-ajust .video-category {
+    color: var(--text-secundari) !important;
+}
+
+.video-about-ajust .video-info p {
+    color: var(--text-secundari) !important;
+}
+
+.seccion-curriculum {
+    padding: 80px 0;
+}
+
+.bento-grid-cv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.bento-card {
+    background-color: var(--fons-caixes);
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--vora-suau);
+    box-shadow: var(--ombras-premium);
+}
+
+.bento-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+}
+
+.educacio-box {
+    grid-column: span 2;
+}
+
+.item-cv {
+    margin-bottom: 24px;
+}
+
+.item-cv:last-child {
+    margin-bottom: 0;
+}
+
+.item-cv h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.item-cv h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secundari);
+    margin-bottom: 8px;
+}
+
+.item-cv p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-secundari);
+}
+
+.competencies-box {
+    grid-column: span 1;
+}
+
+.llista-competencies {
+    list-style: none;
+}
+
+.llista-competencies li {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: var(--text-principal);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.llista-competencies li span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secundari);
+    background-color: var(--fons-global);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+.idioma-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--vora-suau);
+    font-size: 14px;
+}
+
+.idioma-row:last-of-type {
+    border-bottom: none;
+}
+
+.idioma-row span {
+    color: var(--text-secundari);
+}
+
+.descarrega-box {
+    grid-column: span 2;
+}
+
+.descarrega-box p {
+    font-size: 14px;
+    color: var(--text-secundari);
+    margin-bottom: 20px;
+}
+
+.opcions-descarrega {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.seccion-portfoli {
+    padding: 80px 0;
+}
+
+.grid-portfoli {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-proyecto {
+    background-color: var(--fons-caixes);
+    border-radius: 18px;
+    padding: 32px;
+    border: 1px solid var(--vora-suau);
+    box-shadow: var(--ombras-premium);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 12px;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    margin-bottom: 16px;
+}
+
+.badge.m0225 { background-color: #e8f4ff; color: #0071e3; }
+.badge.m0222 { background-color: #eafaf1; color: #1a8754; }
+.badge.m0221 { background-color: #fef5e7; color: #b95d00; }
+.badge.m0223 { background-color: #f4ecf7; color: #7d3c98; }
+.badge.mopt { background-color: #f5f5f7; color: #1d1d1f; }
+
+.tarjeta-proyecto h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.tarjeta-proyecto p {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-secundari);
+    margin-bottom: 24px;
+}
+
+.btn-detall {
+    font-size: 14px;
+    color: var(--blau-apple);
+    text-decoration: none;
+    font-weight: 400;
+    align-self: flex-start;
+}
+
+.btn-detall:hover {
+    text-decoration: underline;
+}
+
+.seccion-video {
+    padding: 40px 0 80px 0;
+}
+
+.tarjeta-video-premium {
+    background-color: var(--fons-caixes);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--vora-suau);
+    box-shadow: var(--ombras-premium);
+    max-width: 850px; 
+    margin: 0 auto;
+}
+
+.contenidor-video {
+    background-color: #000000;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.contenidor-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.video-info {
+    padding: 32px;
+    text-align: left;
+}
+
+.video-category {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secundari);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.video-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.video-info p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--text-secundari);
+}
+
+.seccion-contacte {
+    padding: 100px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contenidor-contacte {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.seccion-contacte h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.seccion-contacte p {
+    font-size: 17px;
+    color: var(--text-secundari);
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+.email-link {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-principal);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+}
+
+.email-link:hover {
+    color: var(--blau-apple);
+}
+
+.enllaços-socials {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.location {
+    display: block;
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--text-secundari);
+}
+
+.peu-pagina {
+    padding: 32px 0;
+    border-top: 1px solid var(--vora-suau);
+    font-size: 12px;
+    color: var(--text-secundari);
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .contingut-inici h1 { font-size: 44px; }
+    .bento-grid-cv { grid-template-columns: 1fr; }
+    .educacio-box, .descarrega-box { grid-column: span 1; }
+    .inici-wrapper, .about-bento-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .foto-perfil, .caixa-about-video {
+        justify-content: center;
+        max-width: 100%;
+    }
+    .caixa-about-text { text-align: center; max-width: 100%; }
+    .text-apple-manifesto { font-size: 24px; }
+}
+
+@media (max-width: 768px) {
+    .inici-wrapper {
+        flex-direction: column-reverse;
+    }
+    .cta-group { justify-content: center; }
+    .foto-perfil img { width: 240px; height: 240px; }
+    .grid-portfoli { grid-template-columns: 1fr; }
+    .seccio-titol { font-size: 32px; }
+    .menu { display: none; }
+    .email-link { font-size: 22px; }
+}
